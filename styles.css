@@ -34,6 +34,7 @@ input {
   border-radius: 10px;
   margin-top: 5px;
   margin-bottom: 20px;
+  font-style: italic;
 }
 button {
   background-color: goldenrod;
@@ -48,12 +49,13 @@ button:hover {
   background-color: gold;
 }
 
-#toal {
-  font-size: 2em;
+#total {
+  font-size: 2rem;
   font-weight: bold;
 }
 
 #total-amount {
   color: goldenrod;
   font-weight: bold;
+  font-style: italic;
 }
