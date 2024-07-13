@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Interest Calculator</h1>
+    <header class="header" id="parentID ">
+      <h1 class="child" id="child">Interest</h1>
+      <h1 class="child" id="child">Calculator</h2>
+    </header>
+   
 
-    <form>
-      <label for="principal">Principal Amount: </label>
+    <form id="parent">
+      <label for="principal" class="label">Principal Amount: </label>
       <input type="number" id="principal" />
 
-      <label for="rate">Interest Rate: </label>
+      <label for="rate"class="label">Interest Rate: </label>
       <input type="number" id="rate" />
 
-      <label for="years">Years: </label>
+      <label for="years"class="label">Years: </label>
       <input type="number" id="years" />
 
-      <button type="button" onclick="calculate()">Submit</button>
+      <button type="button" onclick="calculate()" id="Mybutton">Submit</button>
 
       <p id="total">Total: <span id="total-amount"> $0.00</span></p>
     </form>

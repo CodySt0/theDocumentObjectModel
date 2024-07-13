@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-  background-color: gold;
+  /* background-color: gold; */
 }
 
 #total {
