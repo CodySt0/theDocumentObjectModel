@@ -54,6 +54,33 @@ function calculate() {
     color.style.backgroundColor = "gold";
   });
 
+  //TRIED TO CREATE ELEMENT FOR FOOTER, NOT SURE WHY IT'S NOT SHOWING
+  //ON PAGE
+  function createFooter() {
+    // DocumentFragment
+    let fragment = document.createDocumentFragment();
+    let footer = document.createElement("footer");
+    footer.classList.add("footer");
+
+    let h1 = document.createElement("h1");
+    h1.textContent = "Thank you";
+
+    let p = document.createElement("p");
+    p.textContent = "For checking out my project!";
+
+    // Append elements to the footer
+    footer.appendChild(h1);
+    footer.appendChild(p);
+
+    fragment.appendChild(footer);
+    document.body.appendChild(fragment);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    createFooter();
+  });
+
+  //Math for Calculator
   const result = principal * Math.pow(1 + rate / 1, 1 * years);
 
   totalAmount.textContent = result.toLocaleString(undefined, {
@@ -61,3 +88,11 @@ function calculate() {
     currency: "USD",
   });
 }
+
+//BOM Methods
+let windowHeight = window.innerHeight;
+console.log(`Window height: ${windowHeight}px`);
+
+window.alert("Thank you for checking out my project!");
+
+
