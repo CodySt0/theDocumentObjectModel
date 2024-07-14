@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 function calculate() {
   //Cache using selectElementByID
   const totalAmount = document.getElementById("total-amount");
@@ -56,29 +58,29 @@ function calculate() {
 
   //TRIED TO CREATE ELEMENT FOR FOOTER, NOT SURE WHY IT'S NOT SHOWING
   //ON PAGE
-  function createFooter() {
-    // DocumentFragment
-    let fragment = document.createDocumentFragment();
-    let footer = document.createElement("footer");
-    footer.classList.add("footer");
+  // function createFooter() {
+  //   // DocumentFragment
+  //   let fragment = document.createDocumentFragment();
+  //   let footer = document.createElement("footer");
+  //   footer.classList.add("footer");
 
-    let h1 = document.createElement("h1");
-    h1.textContent = "Thank you";
+  //   let h1 = document.createElement("h1");
+  //   h1.textContent = "Thank you";
 
-    let p = document.createElement("p");
-    p.textContent = "For checking out my project!";
+  //   let p = document.createElement("p");
+  //   p.textContent = "For checking out my project!";
 
-    // Append elements to the footer
-    footer.appendChild(h1);
-    footer.appendChild(p);
+  //   // Append elements to the footer
+  //   footer.appendChild(h1);
+  //   footer.appendChild(p);
 
-    fragment.appendChild(footer);
-    document.body.appendChild(fragment);
-  }
+  //   fragment.appendChild(footer);
+  //   document.body.appendChild(fragment);
+  // }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    createFooter();
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   createFooter();
+  // });
 
   //Math for Calculator
   const result = principal * Math.pow(1 + rate / 1, 1 * years);
@@ -92,7 +94,15 @@ function calculate() {
 //BOM Methods
 let windowHeight = window.innerHeight;
 console.log(`Window height: ${windowHeight}px`);
-
 window.alert("Thank you for checking out my project!");
 
-
+// // // TRIED TO USE DOM EVENT-BASED VALIDATION
+// function validateNumberInput(input, errorElement) {
+//   let value = input.value.trim();
+//   if (value === 'string' || isNaN(value)) {
+//     errorElement.textContent = "Please enter a valid number.";
+//     return false;
+//   }
+//   errorElement.textContent = "";
+//   return true;
+// }
