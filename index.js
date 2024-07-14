@@ -1,5 +1,3 @@
-const { text } = require("express");
-
 function calculate() {
   //Cache using selectElementByID
   const totalAmount = document.getElementById("total-amount");
@@ -96,13 +94,13 @@ let windowHeight = window.innerHeight;
 console.log(`Window height: ${windowHeight}px`);
 window.alert("Thank you for checking out my project!");
 
-// // // TRIED TO USE DOM EVENT-BASED VALIDATION
-// function validateNumberInput(input, errorElement) {
-//   let value = input.value.trim();
-//   if (value === 'string' || isNaN(value)) {
-//     errorElement.textContent = "Please enter a valid number.";
-//     return false;
-//   }
-//   errorElement.textContent = "";
-//   return true;
-// }
+//DOM EVENT-BASED VALIDATION
+function validateNumberInput(input, errorElement) {
+  let value = input.value.trim();
+  if (value === "string" || isNaN(value)) {
+    errorElement.textContent = "Please enter a valid number.";
+    return false;
+  }
+  errorElement.textContent = "";
+  return true;
+}
